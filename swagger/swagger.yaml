@@ -1,0 +1,272 @@
+# Example YAML to get you started quickly.
+# Be aware that YAML has indentation based scoping.
+# Code completion support is available so start typing for available options.
+swagger: '2.0'
+
+# This is your document metadata
+info:
+  version: "1.0.0"
+  title: <Progetto pasti>
+
+# Describe your paths here
+paths:
+  /home:
+    get:
+      description: |
+        Richiesta pagina home
+      responses:
+        200:
+          description: Redirect pagina home
+          
+  /aiuto:
+    get:
+      description: |
+        Richiesta pagina home
+      responses:
+        200:
+          description: Redirect pagina home
+          
+  /ordina:
+    get:
+      description: |
+        Richiesta pagina ordina
+      responses:
+        200:
+          description: Redirect pagina home
+          
+  /conferma_ordine:
+    get:
+      description: |
+        Richiesta pagina conferma_ordine
+      responses:
+        200:
+          description: Redirect pagina conferma ordine
+          
+  /ordine_vuoto:
+    get:
+      description: |
+        Richiesta pagina ordine vuoto
+      responses:
+        200:
+          description: Redirect pagina ordine vuoto
+          
+  /invio_ordine:
+    post:
+      description: |
+        Richiesta pagina pasti_ordinati o ordine_vuoto in caso nessuna richiesta di pasti
+      parameters:
+        - name: lunedi_primo
+          in: query
+          description: lunedi primo
+          required: true
+          type: string
+          format: string
+        - name: lunedi_seccondo
+          in: query
+          description: lunedi secondo
+          required: true
+          type: string
+          format: string
+        - name: lunedi_contorno
+          in: query
+          description: lunedi contorno
+          required: true
+          type: string
+          format: string
+        - name: lunedi_dessert
+          in: query
+          description: lunedi desssert
+          required: true
+          type: string
+          format: string
+          
+        - name: martedi_primo
+          in: query
+          description: martedi primo
+          required: true
+          type: string
+          format: string
+        - name: martedi_seccondo
+          in: query
+          description: martedi secondo
+          required: true
+          type: string
+          format: string
+        - name: martedi_contorno
+          in: query
+          description: martedi contorno
+          required: true
+          type: string
+          format: string
+        - name: martedi_dessert
+          in: query
+          description: martedi desssert
+          required: true
+          type: string
+          format: string
+          
+        - name: mercoledi_primo
+          in: query
+          description: mercoledi primo
+          required: true
+          type: string
+          format: string
+        - name: mercoledi_seccondo
+          in: query
+          description: mercoledi secondo
+          required: true
+          type: string
+          format: string
+        - name: mercoledi_contorno
+          in: query
+          description: mercoledi contorno
+          required: true
+          type: string
+          format: string
+        - name: mercoledi_dessert
+          in: query
+          description: mercoledi desssert
+          required: true
+          type: string
+          format: string
+          
+        - name: giovedi_primo
+          in: query
+          description: giovedi primo
+          required: true
+          type: string
+          format: string
+        - name: giovedi_seccondo
+          in: query
+          description: giovedi secondo
+          required: true
+          type: string
+          format: string
+        - name: giovedi_contorno
+          in: query
+          description: giovedi contorno
+          required: true
+          type: string
+          format: string
+        - name: giovedi_dessert
+          in: query
+          description: giovedi desssert
+          required: true
+          type: string
+          format: string
+          
+        - name: venerdiprimo
+          in: query
+          description: venerdi primo
+          required: true
+          type: string
+          format: string
+        - name: venerdi_seccondo
+          in: query
+          description: venerdi secondo
+          required: true
+          type: string
+          format: string
+        - name: venerdi_contorno
+          in: query
+          description: venerdi contorno
+          required: true
+          type: string
+          format: string
+        - name: venerdi_dessert
+          in: query
+          description: venerdi desssert
+          required: true
+          type: string
+          format: string
+          
+        - name: sabato_primo
+          in: query
+          description: sabato primo
+          required: true
+          type: string
+          format: string
+        - name: sabato_seccondo
+          in: query
+          description: sabato secondo
+          required: true
+          type: string
+          format: string
+        - name: sabato_contorno
+          in: query
+          description: sabato contorno
+          required: true
+          type: string
+          format: string
+        - name: sabato_dessert
+          in: query
+          description: sabato desssert
+          required: true
+          type: string
+          format: string
+          
+        - name: domenica_primo
+          in: query
+          description: domenica primo
+          required: true
+          type: string
+          format: string
+        - name: domenica_seccondo
+          in: query
+          description: domenica secondo
+          required: true
+          type: string
+          format: string
+        - name: domenica_contorno
+          in: query
+          description: domenica contorno
+          required: true
+          type: string
+          format: string
+        - name: domenica_dessert
+          in: query
+          description: domenica desssert
+          required: true
+          type: string
+          format: string
+    
+      responses:
+        200:
+          description: Redirect pagina home
+  
+  /pasti_ordinati:
+    get:
+      description: |
+        Richiesta pagina pasti_ordinatii o nussun_pasto  in base se ci sono ordini o meno
+      responses:
+        200:
+          description: Redirect pagina ordine vuoto
+          
+  /:
+    get:
+      description: |
+        Rischiesta pagina login
+      responses:
+        200:
+          description: Redirect pagina login
+          
+  /home2:
+    post:
+      description: |
+        Rischieta alla pagina home che gli viene restituita se ll'utente è redistrato
+      parameters:
+        - name: utente
+          in: query
+          description: user inserito
+          required: true
+          type: string
+          format: string
+        - name: password
+          in: query
+          description: password insetita
+          required: true
+          type: string
+          format: string
+      responses:
+        200:
+          description: Redirect pagina home se registrato altrimenti ricarico la pagina
