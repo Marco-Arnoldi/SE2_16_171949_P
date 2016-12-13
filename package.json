@@ -1,0 +1,20 @@
+{
+  "name": "progetto",
+  "version": "1.0.0",
+  "description": "progetto pasti",
+  "main": "server.js",
+  "dependencies": {
+    "bind": "^0.1.7",
+    "express": "^4.14.0"
+  },
+  "repository":{
+    "type":"git",
+    "url":"https://github.com/Marco-Arnoldi/SE2_16_171949_P.git"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "171949",
+  "license": "ISC"
+}
