@@ -212,31 +212,89 @@ app.post('/invio_ordine',function(req,res)
     }
     
     
-    //console log per vericare che i valori dei pasti
-    
-    console.log(lunedi);
-    console.log("");
-    console.log(martedi);
-    console.log("");
-    console.log(mercoledi);
-    console.log("");
-    console.log(giovedi);
-    console.log("");
-    console.log(venerdi);
-    console.log("");
-    console.log(sabato);
-    console.log("");
-    console.log(domenica);
-    console.log("");
-    
-    console.log("/////////////////////////////////////////////////////////////////////");
-
-    
+  
     res.sendFile(__dirname + '/conferma_ordine.html'); 
 });
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+var bind = require('bind');
+
+
+/**
+ * @brief RESTITUISCE LA PAGINA PASTI ORDINATI E INVIA ALLA PAGINA I DATI DEI PASTI
+ */
+
+app.get('/pasti_ordinati',function(req,res)
+{
+    if(pasto_odinato)
+    {    
+    bind.toFile(__dirname + '/pasti_ordinati.tpl', 
+	{
+            //VALORI MANDATI ALLA PAGINA "pasti_ordinati.tpl"
+            pasto_odinato : pasto_odinato,
+        
+            //LUNEDI
+            lunedi_primo: lunedi.primo,
+            lunedi_secondo: lunedi.secondo,
+            lunedi_contorno: lunedi.contorno,
+            lunedi_dessert: lunedi.dessert,
+        
+            //MARTEDI
+            martedi_primo: martedi.primo,
+            martedi_secondo: martedi.secondo,
+            martedi_contorno: martedi.contorno,
+            martedi_dessert: martedi.dessert,
+        
+            //MERCOLEDI
+            mercoledi_primo: mercoledi.primo,
+            mercoledi_secondo: mercoledi.secondo,
+            mercoledi_contorno: mercoledi.contorno,
+            mercoledi_dessert: mercoledi.dessert,
+        
+            //GIOVEDI
+            giovedi_primo: giovedi.primo,
+            giovedi_secondo: giovedi.secondo,
+            giovedi_contorno: giovedi.contorno,
+            giovedi_dessert: giovedi.dessert,
+        
+            //VENERDI
+            venerdi_primo: venerdi.primo,
+            venerdi_secondo: venerdi.secondo,
+            venerdi_contorno: venerdi.contorno,
+            venerdi_dessert: venerdi.dessert,
+        
+            //SABATO
+            sabato_primo: sabato.primo,
+            sabato_secondo: sabato.secondo,
+            sabato_contorno: sabato.contorno,
+            sabato_dessert: sabato.dessert,
+        
+            //DOMENICA
+            domenica_primo: domenica.primo,
+            domenica_secondo: domenica.secondo,
+            domenica_contorno: domenica.contorno,
+            domenica_dessert: domenica.dessert
+        }, 
+        function(data) 
+        {   
+            //write response
+            res.writeHead(200, {'Content-Type': 'text/html'});
+            res.end(data);
+        });
+    }
+    else
+    {
+        res.sendFile(__dirname + '/nessun_pasto.html');  
+    }
+                 
+});
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 //INFORMARE L'UTENTE DELLA PORTA CHE SI UTILIZZA E DELL'URL DELLA PAGINA DI LOGIN

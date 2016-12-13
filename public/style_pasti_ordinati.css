@@ -1,0 +1,59 @@
+body
+{
+    padding: 25px;
+}
+
+
+h1
+{
+    color: darkviolet;
+    font-weight: bold;
+    text-align: center;
+}
+
+label
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.giorno
+{
+    color: darkviolet;
+}
+
+
+p
+{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
+button
+{
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center !important;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: darkviolet;       
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+
+button:hover {background-color: blueviolet}
+
+button:active {
+  background-color: blueviolet;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
