@@ -1,0 +1,92 @@
+
+.body_ordinapasti
+{
+    padding: 50px;
+    
+}
+
+
+.titolo
+{
+    text-align: center;
+    font-weight: bold;
+    color: red;
+}
+
+label
+{
+    font-size: 18px;
+}
+
+select
+{
+    font-weight: bold;
+    max-width: 400px;
+}
+
+option
+{
+    font-weight: bold;
+}
+
+
+.lunedi
+{
+    display: none;
+}
+
+.martedi
+{
+    display: none;
+}
+
+.mercoledi
+{
+    display: none;
+}
+
+.giovedi
+{
+    display: none;
+}
+
+.venerdi
+{
+    display: none;
+}
+
+.sabato
+{
+    display: none;
+}
+
+.domenica
+{
+    display: none;
+}
+
+
+button 
+{
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: red;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+button:hover {background-color: firebrick}
+
+button:active {
+  background-color: firebrick;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+

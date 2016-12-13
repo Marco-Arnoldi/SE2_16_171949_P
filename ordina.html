@@ -1,0 +1,369 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="style_ordina.css" rel="stylesheet" type="text/css">
+        <title>ORDINA PASTI</title>
+    </head>
+    <body class="body_ordinapasti">
+        <h1 class="titolo">ORDNIA PASTI</h1>
+        <br><br>
+        <form action="/invio_ordine" method="post">
+            <label>LUNEDI :</label>&emsp;
+            <label class="radio-inline">
+                <input type="radio" name="lunedi_si_no" id="lunedi_si_no" value="option1" onclick="lunedi_visibile_invisibile()"><label>SI</label>
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="lunedi_si_no" id="lunedi_si_no" value="option2" onclick="lunedi_visibile_invisibile()" checked><label>NO</label>
+            </label>
+            <br><br>
+            <div id="lunedi" class="lunedi">
+                <label>PRIMO :</label>
+                <br>
+                <select class="form-control" id="lunedi_primo" name="lunedi_primo">
+                    <option>NIENTE</option>
+                    <option>PRIMO A</option>
+                    <option>PRIMO B</option>
+                    <option>PRIMO C</option>
+                    <option>PRIMO D</option>
+                </select>
+                <br>
+                <label>SECONDO :</label>
+                <br>
+                <select class="form-control" id="lunedi_secondo" name="lunedi_secondo">
+                    <option>NIENTE</option>
+                    <option>SECOND0 A</option>
+                    <option>SECONDO B</option>
+                    <option>SECONDO C</option>
+                    <option>SECONDO D</option>
+                </select>
+                <br>
+                <label>CONTORNO :</label>
+                <br>
+                <select class="form-control" id="lunedi_contorno" name="lunedi_contorno">
+                    <option>NIENTE</option>
+                    <option>CONTORNO A</option>
+                    <option>CONTORNO B</option>
+                    <option>CONTORNO C</option>
+                    <option>CONTORNO D</option>
+                </select>
+                <br>
+                <label>DESSERT :</label>
+                <br>
+                <select class="form-control" id="lunedi_dessert" name="lunedi_dessert">
+                    <option>NIENTE</option>
+                    <option>DESSERT A</option>
+                    <option>DESSERT B</option>
+                    <option>DESSERT C</option>
+                    <option>DESSERT D</option>
+                </select>
+                <br><br>
+            </div>
+            <label>MARTEDI :</label>&emsp;
+            <label class="radio-inline">
+                <input type="radio" name="martedi_si_no" id="martedi_si_no" value="option1" onclick="martedi_visibile_invisibile()"><label>SI</label>
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="martedi_si_no" id="martedi_si_no" value="option2" onclick="martedi_visibile_invisibile()" checked><label>NO</label>
+            </label>
+            <br><br>
+            <div id="martedi" class="martedi">
+                <label>PRIMO :</label>
+                <br>
+                <select class="form-control" id="martedi_primo" name="martedi_primo">
+                    <option>NIENTE</option>
+                    <option>PRIMO A</option>
+                    <option>PRIMO B</option>
+                    <option>PRIMO C</option>
+                    <option>PRIMO D</option>
+                </select>
+                <br>
+                <label>SECONDO :</label>
+                <br>
+                <select class="form-control" id="martedi_secondo" name="martedi_secondo">
+                    <option>NIENTE</option>
+                    <option>SECONDO A</option>
+                    <option>SECONDO B</option>
+                    <option>SECONDO C</option>
+                    <option>SECONDO D</option>
+                </select>
+                <br>
+                <label>CONTORNO :</label>
+                <br>
+                <select class="form-control" id="martedi_contorno" name="martedi_contorno">
+                    <option>NIENTE</option>
+                    <option>CONTORNO A</option>
+                    <option>CONTORNO B</option>
+                    <option>CONTORNO C</option>
+                    <option>CONTORNO D</option>
+                </select>
+                <br>
+                <label>DESSERT :</label>
+                <br>
+                <select class="form-control" id="martedi_dessert" name="martedi_dessert">
+                    <option>NIENTE</option>
+                    <option>DESSERT A</option>
+                    <option>DESSERT B</option>
+                    <option>DESSERT C</option>
+                    <option>DESSERT D</option>
+                </select>
+                <br><br>
+            </div>
+            <label>MERCOLEDI :</label>&emsp;
+            <label class="radio-inline">
+                <input type="radio" name="mercoledi_si_no" id="mercoledi_si_no" value="option1" onclick="mercoledi_visibile_invisibile()"><label>SI</label>
+            </label>
+            <label class="radio-inline">
+                <input type="radio"  name="mercoledi_si_no" id="mercoledi_si_no" value="option2" onclick="mercoledi_visibile_invisibile()" checked><label>NO</label>
+            </label>
+            <br><br>
+            <div id="mercoledi" class="mercoledi">
+                <label>PRIMO :</label>
+                <br>
+                <select class="form-control" id="mercoledi_primo" name="mercoledi_primo">
+                    <option>NIENTE</option>
+                    <option>PRIMO A</option>
+                    <option>PRIMO B</option>
+                    <option>PRIMO C</option>
+                    <option>PRIMO D</option>
+                </select>
+                <br>
+                <label>SECONDO :</label>
+                <br>
+                <select class="form-control" id="mercoledi_secondo" name="mercoledi_secondo">
+                    <option>NIENTE</option>
+                    <option>SECONDO A</option>
+                    <option>SECONDO B</option>
+                    <option>SECONDO C</option>
+                    <option>SECONDO D</option>
+                </select>
+                <br>
+                <label>CONTORNO :</label>
+                <br>
+                <select class="form-control" id="mercoledi_contorno" name="mercoledi_contorno">
+                    <option>NIENTE</option>
+                    <option>CONTORNO A</option>
+                    <option>CONTORNO B</option>
+                    <option>CONTORNO C</option>
+                    <option>CONTORNO D</option>
+                </select>
+                <br>
+                <label>DESSERT :</label>
+                <br>
+                <select class="form-control" id="mercoledi_dessert" name="mercoledi_dessert">
+                    <option>NIENTE</option>
+                    <option>DESSERT A</option>
+                    <option>DESSERT B</option>
+                    <option>DESSERT C</option>
+                    <option>DESSERT D</option>
+                </select>
+                <br><br>
+            </div>
+            <label>GIOVEDI :</label>&emsp;
+            <label class="radio-inline">
+                <input type="radio" name="giovedi_si_no" id="giovedi_si_no" value="option1" onclick="giovedi_visibile_invisibile()"><label>SI</label>
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="giovedi_si_no" id="giovedi_si_no" value="option2" onclick="giovedi_visibile_invisibile()" checked><label>NO</label>
+            </label>
+            <br><br>
+            <div id="giovedi" class="giovedi">
+                <label>PRIMO :</label>
+                <br>
+                <select class="form-control" id="giovedi_primo" name="giovedi_primo">
+                    <option>NIENTE</option>
+                    <option>PRIMO A</option>
+                    <option>PRIMO B</option>
+                    <option>PRIMO C</option>
+                    <option>PRIMO D</option>
+                </select>
+                <br>
+                <label>SECONDO :</label>
+                <br>
+                <select class="form-control" id="giovedi_secondo" name="giovedi_secondo">
+                    <option>NIENTE</option>
+                    <option>SECONDO A</option>
+                    <option>SECONDO B</option>
+                    <option>SECONDO C</option>
+                    <option>SECONDO D</option>
+                </select>
+                <br>
+                <label>CONTORNO :</label>
+                <br>
+                <select class="form-control" id="giovedi_contorno" name="giovedi_contorno">
+                    <option>NIENTE</option>
+                    <option>CONTORNO A</option>
+                    <option>CONTORNO B</option>
+                    <option>CONTORNO C</option>
+                    <option>CONTORNO D</option>
+                </select>
+                <br>
+                <label>DESSERT :</label>
+                <br>
+                <select class="form-control" id="giovedi_dessert" name="giovedi_dessert">
+                    <option>NIENTE</option>
+                    <option>DESSERT A</option>
+                    <option>DESSERT B</option>
+                    <option>DESSERT C</option>
+                    <option>DESSERT D</option>
+                </select>
+                <br><br>
+            </div>
+            <label>VENERDI :</label>&emsp;
+            <label class="radio-inline">
+                <input type="radio"  name="venerdi_si_no" id="venerdi_si_no" value="option1" onclick="venerdi_visibile_invisibile()"><label>SI</label>
+            </label>
+            <label class="radio-inline">
+                <input type="radio"  name="venerdi_si_no" id="venerdi_si_no" value="option2" onclick="venerdi_visibile_invisibile()" checked><label>NO</label>
+            </label>
+            <br><br>
+            <div id="venerdi" class="venerdi">
+                <label>PRIMO :</label>
+                <br>
+                <select class="form-control" id="venerdi_primo" name="venerdi_primo">
+                    <option>NIENTE</option>
+                    <option>PRIMO A</option>
+                    <option>PRIMO B</option>
+                    <option>PRIMO C</option>
+                    <option>PRIMO D</option>
+                </select>
+                <br>
+                <label>SECONDO :</label>
+                <br>
+                <select class="form-control" id="venerdi_secondo" name="venerdi_secondo">
+                    <option>NIENTE</option>
+                    <option>SECONDO A</option>
+                    <option>SECONDO B</option>
+                    <option>SECONDO C</option>
+                    <option>SECONDO D</option>
+                </select>
+                <br>
+                <label>CONTORNO :</label>
+                <br>
+                <select class="form-control" id="venerdi_contorno" name="venerdi_contorno">
+                    <option>NIENTE</option>
+                    <option>CONTORNO A</option>
+                    <option>CONTORNO B</option>
+                    <option>CONTORNO C</option>
+                    <option>CONTORNO D</option>
+                </select>
+                <br>
+                <label>DESSERT :</label>
+                <br>
+                <select class="form-control" id="venerdi_dessert" name="venerdi_dessert">
+                    <option>NIENTE</option>
+                    <option>DESSERT A</option>
+                    <option>DESSERT B</option>
+                    <option>DESSERT C</option>
+                    <option>DESSERT D</option>
+                </select>
+                <br><br>
+            </div>
+            <label>SABATO :</label>&emsp;
+            <label class="radio-inline">
+                <input type="radio"  name="sabato_si_no" id="sabato_si_no" value="option1" onclick="sabato_visibile_invisibile()"><label>SI</label>
+            </label>
+            <label class="radio-inline">
+                <input type="radio"  name="sabato_si_no" id="sabato_si_no" value="option2" onclick="sabato_visibile_invisibile()" checked><label>NO</label>
+            </label>
+            <br><br>
+            <div id="sabato" class="sabato">
+                <label>PRIMO :</label>
+                <br>
+                <select class="form-control" id="sabato_primo" name="sabato_primo">
+                    <option>NIENTE</option>
+                    <option>PRIMO A</option>
+                    <option>PRIMO B</option>
+                    <option>PRIMO C</option>
+                    <option>PRIMO D</option>
+                </select>
+                <br>
+                <label>SECONDO :</label>
+                <br>
+                <select class="form-control" id="sabato_secondo" name="sabato_secondo">
+                    <option>NIENTE</option>
+                    <option>SECONDO A</option>
+                    <option>SECONDO B</option>
+                    <option>SECONDO C</option>
+                    <option>SECONDO D</option>
+                </select>
+                <br>
+                <label>CONTORNO :</label>
+                <br>
+                <select class="form-control" id="sabato_contorno" name="sabato_contorno">
+                    <option>NIENTE</option>
+                    <option>CONTORNO A</option>
+                    <option>CONTORNO B</option>
+                    <option>CONTORNO C</option>
+                    <option>CONTORNO D</option>
+                </select>
+                <br>
+                <label>DESSERT :</label>
+                <br>
+                <select class="form-control" id="sabato_dessert" name="sabato_dessert">
+                    <option>NIENTE</option>
+                    <option>DESSERT A</option>
+                    <option>DESSERT B</option>
+                    <option>DESSERT C</option>
+                    <option>DESSERT D</option>
+                </select>
+                <br><br>
+            </div>
+            <label>DOMENICA :</label>&emsp;
+            <label class="radio-inline">
+                <input type="radio"  name="domenica_si_no" id="domenica_si_no" value="option1" onclick="domenica_visibile_invisibile()"><label>SI</label>
+            </label>
+            <label class="radio-inline">
+                <input type="radio"  name="domenica_si_no" id="domenica_si_no" value="option2" onclick="domenica_visibile_invisibile()" checked><label>NO</label>
+            </label>
+            <br><br>
+            <div id="domenica" class="domenica" >
+                <label>PRIMO:</label>
+                <br>
+                <select class="form-control" id="domenica_primo" name="domenica_primo">
+                    <option>NIENTE</option>
+                    <option>PRIMO A</option>
+                    <option>PRIMO B</option>
+                    <option>PRIMO C</option>
+                    <option>PRIMO D</option>
+                </select>
+                <br>
+                <label>SECONDO :</label>
+                <br>
+                <select class="form-control" id="domenica_secondo" name="domenica_secondo">
+                    <option>NIENTE</option>
+                    <option>SECONDO A</option>
+                    <option>SECONDO B</option>
+                    <option>SECONDO C</option>
+                    <option>SECONDO D</option>
+                </select>
+                <br>
+                <label>CONTORNO :</label>
+                <br>
+                <select class="form-control" id="domenica_contorno" name="domenica_contorno">
+                    <option>NIENTE</option>
+                    <option>CONTORNO A</option>
+                    <option>CONTORNO B</option>
+                    <option>CONTORNO C</option>
+                    <option>CONTORNO D</option>
+                </select>
+                <br>
+                <label>DESSERT :</label>
+                <br>
+                <select class="form-control" id="domenica_dessert" name="domenica_dessert">
+                    <option>NIENTE</option>
+                    <option>DESSERT A</option>
+                    <option>DESSERT B</option>
+                    <option>DESSERT C</option>
+                    <option>DESSERT D</option>
+                </select>
+                <br><br>
+            </div>  
+            <button>ORDINA PASTI</button>
+        </form>
+        <form action="/home" method="get">
+            <center><button>INDIETRO</button><center>
+        </form>
+    </body>
+    <script src="script.js"></script>
+</html>
