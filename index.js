@@ -210,10 +210,11 @@ app.post('/invio_ordine',function(req,res)
         pasto_odinato = false;
         res.sendFile(__dirname + '/ordine_vuoto.html');     
     }
-    
-    
-  
-    res.sendFile(__dirname + '/conferma_ordine.html'); 
+    else
+    {    
+        res.sendFile(__dirname + '/conferma_ordine.html'); 
+    }
+    //res.sendFile(__dirname + '/conferma_ordine.html'); 
 });
 
 
@@ -232,8 +233,8 @@ app.get('/pasti_ordinati',function(req,res)
 {
     if(pasto_odinato)
     {    
-    bind.toFile(__dirname + '/pasti_ordinati.tpl', 
-	{
+        bind.toFile(__dirname + '/pasti_ordinati.tpl', 
+	   {
             //VALORI MANDATI ALLA PAGINA "pasti_ordinati.tpl"
             pasto_odinato : pasto_odinato,
         
@@ -296,12 +297,60 @@ app.get('/pasti_ordinati',function(req,res)
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
+//DICHIARAZIONE UTENTI REGISTRATI
+
+var lista_utenti = [
+    ["utente1","password1"],
+    ["utente2","password2"],
+    ["utente3","password3"],
+    ["utente4","password4"]
+];
+
+
+
+app.get('/',function(req,res)
+{
+    res.sendFile(__dirname + '/login.html'); 
+});
+
+
+/**
+ * @brief RESTITUISCE LA PAGINA HOME SE L'UTENTE E' REGESTRATO ALTRIMENTI ALTRIMENTRI RICARICA LA PAGINA
+ */
+app.post('/home',function(req,res)
+{
+    var utente_presente = false;
+    
+    var utente = req.body.utente;
+    var password = req.body.password;
+  
+    for(var i = 0 ; i < lista_utenti.length ; i++)
+    {    
+        if(utente == lista_utenti[i][0] && password == lista_utenti[i][1])
+        {
+            utente_presente = true;
+        }
+    }
+    
+    if(utente_presente)
+    {
+        res.sendFile(__dirname + '/home.html');
+    }
+    else
+    {
+        res.sendFile(__dirname + '/login.html'); 
+    }
+    
+});
+
+
+
 
 //INFORMARE L'UTENTE DELLA PORTA CHE SI UTILIZZA E DELL'URL DELLA PAGINA DI LOGIN
 
 app.listen(app.get('port'), function()           
 {
     console.log('Node app is running on port', app.get('port'));
-    console.log('Server running at http://127.0.0.1:1338/home');   
+    console.log('Server running at http://127.0.0.1:1338/');   
 });
 
