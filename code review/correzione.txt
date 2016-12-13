@@ -1,0 +1,14 @@
+
+code review di 172450
+
+ERRORI
+
+1)Variabile port a riga 9 non deltutto necessaria bastava mettere il valore 
+direttamente nella riga 21 quando viene settata la porta quindi spreco di memoria
+
+2) console.log() a riga 81 non necessario che segnala un errore 
+
+
+
+
+
