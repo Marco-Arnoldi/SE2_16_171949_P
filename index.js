@@ -213,8 +213,7 @@ app.post('/invio_ordine',function(req,res)
     else
     {    
         res.sendFile(__dirname + '/conferma_ordine.html'); 
-    }
-    //res.sendFile(__dirname + '/conferma_ordine.html'); 
+    } 
 });
 
 
